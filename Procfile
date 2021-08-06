@@ -1,1 +1,1 @@
-worker: jar <GamBot-1>.jar
+worker: java -jar <GamBot-1>.jar
