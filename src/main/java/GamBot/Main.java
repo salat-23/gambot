@@ -52,6 +52,7 @@ public class Main extends ListenerAdapter {
                 .addEventListeners(new Main())
                 .setActivity(Activity.playing("Type !ping"))
                 .build();
+        System.out.println("The bot is online!");
     }
 
     @Override
