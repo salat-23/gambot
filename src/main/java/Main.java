@@ -12,19 +12,20 @@ import net.dv8tion.jda.internal.JDAImpl;
 import org.jetbrains.annotations.NotNull;
 
 import javax.security.auth.login.LoginException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public class Main extends ListenerAdapter {
 
     public static void main(String[] args) throws LoginException {
-        
+
         JDABuilder jdaBuilder = JDABuilder.createDefault(System.getenv("TOKEN"));
 
         jdaBuilder.setActivity(Activity.watching("you"));
 
         jdaBuilder.build();
-
-
     }
 
     @Override
