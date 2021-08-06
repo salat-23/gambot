@@ -16,11 +16,11 @@ import java.util.Objects;
 
 public class Main extends ListenerAdapter {
 
-    private static final String TOKEN = "ODczMjY0NjgzMTY2MTA1NjYw.YQ15HA.WxqwXOcZIUxyhLhmjTcjsAImgg8";
-
     public static void main(String[] args) throws LoginException {
 
-        JDABuilder jdaBuilder = JDABuilder.createDefault(TOKEN);
+        if (args.length < 1) throw new IllegalArgumentException("You did not provide a token");
+
+        JDABuilder jdaBuilder = JDABuilder.createDefault(args[0]);
 
         jdaBuilder.setActivity(Activity.watching("you"));
 
