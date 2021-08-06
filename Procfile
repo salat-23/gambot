@@ -1,1 +1,1 @@
-worker: java src.main.java.GamBot.Main.java
+worker: java -cp target/classes Main
