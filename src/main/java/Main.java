@@ -17,9 +17,7 @@ import java.util.Objects;
 public class Main extends ListenerAdapter {
 
     public static void main(String[] args) throws LoginException {
-
-        if (args.length < 1) throw new IllegalArgumentException("You did not provide a token");
-
+        
         JDABuilder jdaBuilder = JDABuilder.createDefault(System.getenv("TOKEN"));
 
         jdaBuilder.setActivity(Activity.watching("you"));
