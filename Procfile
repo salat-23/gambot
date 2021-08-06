@@ -1,1 +1,1 @@
-Worker: java src/main/java/GamBot.Main.java
+worker: java src/main/java/GamBot.Main.java
