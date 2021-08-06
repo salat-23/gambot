@@ -1,1 +1,1 @@
-worker: java -cp target/classes Main
+worker: java -cp target/classes/GamBot Main
