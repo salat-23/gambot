@@ -37,7 +37,7 @@
                 <configuration>
                     <appName>gambot23</appName>
                     <processTypes>
-                        <worker>java -cp target/classes:target/dependency/* GamBot.Main</worker>
+                        <worker>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</worker>
                     </processTypes>
                 </configuration>
             </plugin>
