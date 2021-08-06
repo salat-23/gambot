@@ -1,1 +1,1 @@
-worker: java -jar org/example/GamBot/1/GamBot-1.jar
+worker: jar GamBot-1.jar
