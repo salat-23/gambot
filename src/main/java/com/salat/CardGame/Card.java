@@ -1,12 +1,12 @@
-package CardGame;
+package com.salat.CardGame;
 
 public class Card {
 
-    enum CardType {
+    public enum CardType {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
     }
 
-    enum Suit {
+    public enum Suit {
         CLUBS, DIAMONDS, HEARTS, SPADES
     }
 
@@ -94,6 +94,11 @@ public class Card {
 
     public String getName() {
         return name;
+    }
+
+    public String toString() {
+        String cardName = type.name() + " of " + suit.name();
+        return cardName;
     }
 
     public void setName(String name) {

@@ -1,8 +1,11 @@
-package CardGame;
+package com.salat.CardGame.Durak;
+
+import com.salat.CardGame.Card;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class DurakDeck {
 
@@ -45,6 +48,17 @@ public class DurakDeck {
     public Card getCardByNumber(int number) {
         if (number <= deck.size()) return deck.get(number);
         else throw new IllegalStateException("The value is not in the range of the card deck: " + number + " in " + deck.size());
+    }
+
+    public void shuffleDeck() {
+        Random random = new Random();
+        random.nextInt();
+        for (int i = 0; i < CARD_AMOUNT; i++) {
+            int changeIndex = random.nextInt(CARD_AMOUNT);
+            Card buffer = deck.get(i);
+            deck.set(i, deck.get(changeIndex));
+            deck.set(changeIndex, buffer);
+        }
     }
 
 
