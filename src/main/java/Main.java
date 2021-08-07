@@ -1,3 +1,4 @@
+import CardGame.DurakGame;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Message;
@@ -29,14 +30,11 @@ public class Main extends ListenerAdapter {
     public void onMessageReceived(MessageReceivedEvent event)
     {
         Message msg = event.getMessage();
-        if (msg.getContentRaw().equals("!ping"))
+        if (msg.getContentRaw().equals("!testdeck"))
         {
+            DurakGame game = new DurakGame();
             MessageChannel channel = event.getChannel();
-            long time = System.currentTimeMillis();
-            channel.sendMessage("Pong!") /* => RestAction<Message> */
-                    .queue(response /* => Message */ -> {
-                        response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue();
-                    });
+            channel.sendMessage(game.getDeckInfo()).queue();
         }
     }
 }
