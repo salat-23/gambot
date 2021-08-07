@@ -61,6 +61,28 @@ public class DurakDeck {
         }
     }
 
+    public Card takeTopCard() {
+
+        if (deck.size() <= 0) return null;
+
+        Card card = deck.get(deck.size() - 1);
+        deck.remove(deck.size() - 1);
+        return card;
+
+    }
+
+    public int getDeckSize() {
+        return deck.size();
+    }
+
+    public Card takeBottomCard() {
+        if (deck.size() <= 0) return null;
+
+        Card card = deck.get(0);
+        deck.remove(0);
+        return card;
+    }
+
 
 
 
